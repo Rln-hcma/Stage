@@ -1,0 +1,11 @@
+<html>
+  <body>
+    <h1>Formulaire</h1>
+    <p>Recherche: {{search}}</p>
+    <ul>
+      Urls associées: {% for key, value in urls_sort.items() %}
+      <li>{{key}}</li>
+      {% endfor %}
+    </ul>
+  </body>
+</html>
