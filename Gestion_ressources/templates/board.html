@@ -1,0 +1,23 @@
+<html>
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8" />
+<h1>Validation de demande de réseservation de ressource</h1>
+
+<form  action="/board" method="post">
+<p>Requêtes : </p>{% for request in db %}
+Utilisateur : {{request[4]}}
+     <ul>ID: {{request[0]}}, type de ressource: {{request[1]}}, contact n°1: {{request[2]}}, contact n°2: {{request[3]}}
+     <input type="checkbox" value={{ request[0] }} name="mychekbox" ><br>
+      </ul>
+      {% endfor %}
+
+<input type="submit" value="Supprimer" name="supprimer">
+<input type="submit" value="Autoriser" name="autoriser"><br>
+</form>
+
+
+{% if info %}
+  {{info}}
+{% endif %}
+
+
+</html>

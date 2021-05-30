@@ -1,0 +1,22 @@
+<html>
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8" />
+<h1>Formulaire de demande de réservation de ressource</h1>
+<p>Types de ressources : {% for type in type_ressources %} </p>
+     <ul>{{type}} </ul>
+      {% endfor %}
+    </ul>
+
+{% if info %}
+  {{info}}
+{% endif %}
+
+<p>Formulaire </p>
+
+      <form action="/reservation" method="post">
+         <input type="text" name="type_ressource" placeholder="Type de ressource"><br>
+         <input type="text" name="contact1" placeholder="Contact technique"><br>
+         <input type="text" name="contact2" placeholder="Contact académique"><br>
+         <input type="submit" value="Envoie de la demande"><br>
+       </form>
+</html>
+
