@@ -1,0 +1,17 @@
+out2 = []
+i=0
+while i < 3:
+    x = (input("Enter something: "))
+    split = x.split(",")
+    out2.append(split)
+    i = i +1 
+    
+print("Tab:",out2)
+
+for t1 in out2[0]:
+    for t2 in out2[1]:
+       for t3 in out2[2]:
+           elem2 = [t1,t2,t3]
+           response.append(elem2)
+           
+print(response)
